@@ -27,8 +27,8 @@ for character in chinese_nonrep:
     unicode_list.append(uni_char)
 
 
-print(unicode_list)
-print(len(unicode_list))
+#print(unicode_list)
+#print(len(unicode_list))
     
 frase_FER = ''
 for unic in unicode_list:
