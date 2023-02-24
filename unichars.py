@@ -5,7 +5,7 @@ lista_csvs = ["Boss Text.csv","Level Name.csv","UI Text.csv"]
 for archive in lista_csvs:
     df = pd.read_csv(archive)
     chinese_col = df["Chinese (Simplified)(zh-CN)"].tolist()
-    print(chinese_col)
+    #print(chinese_col)
     
     
     chinese_chars = []
@@ -19,8 +19,8 @@ for archive in lista_csvs:
     #print(chinese_chars)
     
     chinese_nonrep.update(chinese_chars)
-    print(chinese_nonrep)
-    print(len(chinese_nonrep))
+    #print(chinese_nonrep)
+    #print(len(chinese_nonrep))
     
 for character in chinese_nonrep:
     uni_char = hex(ord(character))[2:]  #converting each sole character into unicode
@@ -33,7 +33,7 @@ print(len(unicode_list))
 frase_FER = ''
 for unic in unicode_list:
     frase_FER += unic +','
-print(frase_FER)
+#print(frase_FER)
 
 with open('fer.txt', 'w') as f:
     f.write(frase_FER)
